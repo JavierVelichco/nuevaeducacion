@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Inflar</title>
+    <!-- Incluir Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJv3H7+JbO2y7N2bOfo0vYJnbz5O1zVkpv54yLjmM+fL+Gx2yk4YPqO9u3zx" crossorigin="anonymous">
+    <style>
+        .game-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            border: 2px solid #000;
+            overflow: hidden;
+        }
+        .inflatable {
+            position: absolute;
+            bottom: 0;
+            transition: transform 1s ease-out;
+            cursor: pointer;
+        }
+        .puntuacion {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <h1>Juego Inflar</h1>
+        <div class="game-container" id="gameContainer">
+            <!-- La imagen inflable se añadirá aquí dinámicamente -->
+        </div>
+        <div class="puntuacion" id="score">Puntuación: 0</div>
+        <button class="btn btn-primary mt-3" onclick="startGame()">Empezar Juego</button>
+    </div>
+
+    <!-- Incluir jQuery y Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        let puntos = 0;
+
+        function startGame() {
+            // Iniciar o reiniciar el juego
+            puntos = 0;
+            document.getElementById("score").textContent = "Puntuación: 0";
+            spawnInflatable();
+        }
+
+        function spawnInflatable() {
+            const gameContainer = document.getElementById("gameContainer");
+            const inflatable = document.createElement("img");
+
+            // Imagen de billetes inflables
+            inflatable.src = "img/billete100.png";
+            inflatable.classList.add("inflatable");
+            inflatable.style.left = Math.random() * (gameContainer.clientWidth - 50) + 'px'; // Posición aleatoria
+
+            // Agregarla al contenedor del juego
+            gameContainer.appendChild(inflatable);
+
+            // Animación de subida (inflar)
+            inflatable.style.transform = 'translateY(-150px)';
+            
+            // Detectar clic en el objeto inflable (billete)
+            inflatable.addEventListener('click', function() {
+                puntos++;
+                document.getElementById("score").textContent = "Puntuación: " + puntos;
+
+                // Eliminar el objeto inflable después de hacer clic
+                inflatable.remove();
+                
+                // Generar un nuevo objeto inflable después de un breve retraso
+                setTimeout(spawnInflatable, 1000);
+            });
+
+            // Después de un tiempo, eliminar la imagen si no fue clickeada
+            setTimeout(function() {
+                inflatable.remove();
+                spawnInflatable(); // Generar un nuevo objeto inflable
+            }, 3000); // 3 segundos antes de eliminarlo si no fue clickeado
+        }
+    </script>
+</body>
+</html>
