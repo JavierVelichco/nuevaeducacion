@@ -1,0 +1,31 @@
+
+
+.degradado-dark {
+  background: linear-gradient(to bottom, #ffffff, #343a40); /* Degradado desde blanco hasta un tono oscuro (dark) */
+}
+
+
+        /* Estilos personalizados para los tabs */
+        .nav-link {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        /* Tab activo */
+        .nav-pills .nav-link.active {
+            background-color: #343a40 !important; /* Fondo oscuro */
+            color: #fff !important; /* Texto blanco */
+        }
+        /* Tab inactivo */
+        .nav-pills .nav-link {
+            background-color: #f8f9fa !important; /* Fondo claro */
+            color: #343a40 !important; /* Texto oscuro */
+        }
+        /* Hover sobre el tab */
+        .nav-pills .nav-link:hover {
+            background-color: #e9ecef;
+            color: #343a40;
+        }
+        /* Fondo de la página */
+        body {
+            background-color: #f4f4f4;
+        }
+    

@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inversiones</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
-<body>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet"> <!-- Este debe ir después de Bootstrap -->
+    </head>
+<body class="bg-light">
   <header>
     <!--menu-->
     <nav class="navbar navbar-expand-sm bg-body-tertiary" data-bs-theme="dark">
@@ -26,10 +27,8 @@
                 <ul class="dropdown-menu">
                   <li> <a class="dropdown-item" href="idiomas.html"> Idiomas </a></li> 
                   <li> <a class="dropdown-item" href="inversiones.html"> Inversiones</a></li> 
-                  <li> <a class="dropdown-item" href="desafios.html"> Desafios</a></li>
                   <li> <a class="dropdown-item" href="economia.html"> Economía</a></li>
                   <li> <a class="dropdown-item" href="gestion.html"> Gestión</a></li>  
-                  <li> <a class="dropdown-item" href="sustentabilidad.html"> Sustentabilidad</a></li>  
                   <li> <a class="dropdown-item" href="salud.html"> Salud</a></li>  
                 </ul>
               </li>           
@@ -43,7 +42,7 @@
                 <a class="nav-link" href="contacto.html">Contacto</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="jugareljuego.html">Juego</a>
+                <a class="nav-link" href="juego.html">Juego</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="autorpagina.html">Sobre mi</a>
@@ -54,168 +53,138 @@
       </nav>
     </header>
 
-<div class="container">
-        <h1>Nueva Educación ♥</h1>
-</div>
-
-<div class="container">
-          <p>Una sociedad en cambio continuo necesita de una educación que se adapte constantemente 
-          </p>
-    
-</div>
-
-    <!-- Hero Section -->
-    <section class="bg-light py-5 text-center">
+    <!-- Título e introducción -->
+    <section class="degradado-dark text-light py-3 text-center">
       <div class="container">
-          <h1 class="display-4">Bienvenido a tu guía de inversiones</h1>
-          <p class="lead">Descubre una variedad de instrumentos financieros que te permitirán diversificar tu portafolio y hacer crecer tu dinero de forma efectiva y segura.</p>
+          <h1 class="text-center mb-3 text-black">Inversiones</h1>
+          <p>Descubre un mundo desconocido, abrirás la puerta a una variedad de instrumentos financieros que te permitirán diversificar tu portafolio y hacer crecer tu dinero de forma efectiva y segura.</p>
       </div>
   </section>
 
-  <!-- Bonos Section -->
-  <section class="py-5" id="bonos">
+  <!-- Sección de Tabs -->
+  <section class="py-3" id="inversiones">
       <div class="container">
-          <h2 class="section-title">1. Bonos</h2>
-          <p class="section-subtitle">¿Qué son los bonos?</p>
-          <p class="section-text">Los bonos son instrumentos de deuda que emiten gobiernos o empresas para financiarse. Al comprar un bono, básicamente le prestas dinero al emisor a cambio de un pago periódico de intereses y la promesa de que te devolverán el valor nominal al vencimiento.</p>
-          <h5 class="section-subtitle">Características clave:</h5>
-          <ul>
-              <li>Intereses (Cupón): El emisor paga un interés fijo o variable sobre el valor nominal del bono.</li>
-              <li>Fecha de vencimiento: El bono tiene una fecha de vencimiento cuando se devuelve el principal invertido.</li>
-              <li>Riesgo: Los bonos de gobiernos suelen ser más seguros, mientras que los bonos corporativos pueden tener mayor riesgo.</li>
+          <!-- Nav Pills para Tabs -->
+          <ul class="nav nav-pills mb-3 d-flex flex-column flex-md-row" id="inversionTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                  <a class="nav-link active text-white bg-dark" id="bonos-tab" data-bs-toggle="pill" href="#bonos" role="tab" aria-controls="bonos" aria-selected="true">Bonos</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                  <a class="nav-link text-dark bg-light" id="cedears-tab" data-bs-toggle="pill" href="#cedears" role="tab" aria-controls="cedears" aria-selected="false">Cedears</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                  <a class="nav-link text-dark bg-light" id="letras-tab" data-bs-toggle="pill" href="#letras" role="tab" aria-controls="letras" aria-selected="false">Letras del Tesoro</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                  <a class="nav-link text-dark bg-light" id="corporativos-tab" data-bs-toggle="pill" href="#corporativos" role="tab" aria-controls="corporativos" aria-selected="false">Bonos Corporativos</a>
+              </li>
+              <li class="nav-item" role="presentation">
+                  <a class="nav-link text-dark bg-light" id="fondos-tab" data-bs-toggle="pill" href="#fondos" role="tab" aria-controls="fondos" aria-selected="false">FCI</a>
+              </li>
           </ul>
-          <h5 class="section-subtitle">Ventajas de invertir en bonos:</h5>
-          <ul>
-              <li>Renta fija y predecible.</li>
-              <li>Menor riesgo comparado con acciones.</li>
-              <li>Diversificación en tu portafolio.</li>
-          </ul>
+
+          <!-- Línea de separación -->
+          <div class="border-top border-dark my-3"></div>
+
+          <!-- Contenido de los Tabs -->
+          <div class="tab-content" id="inversionTabsContent">
+              <!-- Bonos -->
+              <div class="tab-pane fade show active" id="bonos" role="tabpanel" aria-labelledby="bonos-tab">
+                  <h2>1. Bonos</h2>
+                  <p>Los bonos son instrumentos de deuda emitidos por gobiernos o empresas para financiarse...</p>
+                  <h5>Características:</h5>
+                  <ul>
+                      <li>Intereses (Cupón): El emisor paga un interés fijo o variable.</li>
+                      <li>Fecha de vencimiento: El bono tiene una fecha de vencimiento.</li>
+                      <li>Riesgo: Los bonos de gobiernos suelen ser más seguros.</li>
+                  </ul>
+              </div>
+
+              <!-- Cedears -->
+              <div class="tab-pane fade" id="cedears" role="tabpanel" aria-labelledby="cedears-tab">
+                  <h2>2. Cedears</h2>
+                  <p>Los Cedears permiten invertir en acciones extranjeras sin necesidad de abrir una cuenta internacional...</p>
+                  <h5>Características:</h5>
+                  <ul>
+                      <li>Acciones internacionales.</li>
+                      <li>Los Cedears siguen el precio de la acción subyacente.</li>
+                      <li>Se negocian en pesos.</li>
+                  </ul>
+              </div>
+
+              <!-- Letras del Tesoro -->
+              <div class="tab-pane fade" id="letras" role="tabpanel" aria-labelledby="letras-tab">
+                  <h2>3. Letras del Tesoro</h2>
+                  <p>Las Letras del Tesoro son instrumentos de deuda emitidos por gobiernos con plazos cortos...</p>
+                  <h5>Características:</h5>
+                  <ul>
+                      <li>Plazo corto: Menos de un año.</li>
+                      <li>Rendimiento: Diferencia entre precio de compra y valor nominal.</li>
+                      <li>Bajo riesgo: Son emitidas por gobiernos.</li>
+                  </ul>
+              </div>
+
+              <!-- Bonos Corporativos -->
+              <div class="tab-pane fade" id="corporativos" role="tabpanel" aria-labelledby="corporativos-tab">
+                  <h2>4. Bonos Corporativos</h2>
+                  <p>Los bonos corporativos son emitidos por empresas para financiarse...</p>
+                  <h5>Características:</h5>
+                  <ul>
+                      <li>Mayor rendimiento que los bonos gubernamentales.</li>
+                      <li>Riesgo crediticio: El riesgo de impago es mayor en bonos corporativos.</li>
+                  </ul>
+              </div>
+
+              <!-- Fondos Comunes -->
+              <div class="tab-pane fade" id="fondos" role="tabpanel" aria-labelledby="fondos-tab">
+                  <h2>5. Fondos Comunes de inversión</h2>
+                  <p>Los FCI son vehículos de inversión colectiva donde los fondos de varios inversores se agrupan...</p>
+                  <h5>Características:</h5>
+                  <ul>
+                      <li>Diversificación: El dinero se distribuye en diferentes activos.</li>
+                      <li>Gestión profesional: Un equipo se encarga de administrar el fondo.</li>
+                      <li>Liquidez: Posibilidad de redimir participaciones fácilmente.</li>
+                  </ul>
+              </div>
+          </div>
       </div>
   </section>
 
-  <!-- Cedears Section -->
-  <section class="bg-light py-5" id="cedears">
-      <div class="container">
-          <h2 class="section-title">2. Cedears</h2>
-          <p class="section-subtitle">¿Qué son los Cedears?</p>
-          <p class="section-text">Los Cedears (Certificados de Depósito Argentinos) son instrumentos financieros que permiten invertir en acciones extranjeras, pero a través de la Bolsa local. Ofrecen la posibilidad de invertir en empresas de todo el mundo sin necesidad de abrir una cuenta en el extranjero.</p>
-          <h5 class="section-subtitle">Características clave:</h5>
-          <ul>
-              <li>Permiten acceder a acciones de empresas internacionales.</li>
-              <li>Los Cedears siguen el precio de la acción subyacente en su mercado original.</li>
-              <li>Se negocian en pesos, pero están ligados a activos internacionales.</li>
-          </ul>
-          <h5 class="section-subtitle">Ventajas de los Cedears:</h5>
-          <ul>
-              <li>Exposición a mercados globales sin tener que invertir en moneda extranjera.</li>
-              <li>Diversificación internacional para tu portafolio.</li>
-              <li>Beneficios de las variaciones en el valor de las acciones extranjeras.</li>
-          </ul>
-      </div>
-  </section>
 
-  <!-- Letras del Tesoro Section -->
-  <section class="py-5" id="letras">
-      <div class="container">
-          <h2 class="section-title">3. Letras del Tesoro</h2>
-          <p class="section-subtitle">¿Qué son las Letras del Tesoro?</p>
-          <p class="section-text">Son instrumentos de deuda emitidos por los gobiernos con plazos generalmente cortos. Son similares a los bonos, pero con un plazo de vencimiento más rápido y sin pagos periódicos de intereses. En lugar de recibir pagos de intereses, los inversores compran las letras a un precio inferior y al vencimiento reciben su valor nominal.</p>
-          <h5 class="section-subtitle">Características clave:</h5>
-          <ul>
-              <li>Plazo corto: Tienen plazos de vencimiento de menos de un año.</li>
-              <li>Rendimiento: El rendimiento es la diferencia entre el valor nominal y el precio de compra.</li>
-              <li>Bajo riesgo: Al ser emitidas por gobiernos, son consideradas de bajo riesgo.</li>
-          </ul>
-          <h5 class="section-subtitle">Ventajas de invertir en Letras del Tesoro:</h5>
-          <ul>
-              <li>Liquidez, ya que se vencen rápidamente.</li>
-              <li>Bajos riesgos, especialmente si se invierte en letras del gobierno.</li>
-          </ul>
-      </div>
-  </section>
-
-  <!-- Bonos Corporativos Section -->
-  <section class="bg-light py-5" id="corporativos">
-      <div class="container">
-          <h2 class="section-title">4. Bonos Corporativos</h2>
-          <p class="section-subtitle">¿Qué son los Bonos Corporativos?</p>
-          <p class="section-text">Los bonos corporativos son emitidos por empresas con el fin de financiarse. Son similares a los bonos gubernamentales, pero presentan un mayor riesgo dependiendo de la salud financiera de la empresa emisora. A cambio del riesgo adicional, los bonos corporativos suelen ofrecer tasas de interés más altas.</p>
-          <h5 class="section-subtitle">Características clave:</h5>
-          <ul>
-              <li>Emisión por empresas privadas.</li>
-              <li>Mayor rendimiento que los bonos gubernamentales debido al mayor riesgo.</li>
-              <li>Riesgo crediticio: El riesgo de impago es mayor si la empresa emite bonos de bajo rating.</li>
-          </ul>
-          <h5 class="section-subtitle">Ventajas de los Bonos Corporativos:</h5>
-          <ul>
-              <li>Mejor rendimiento en comparación con bonos gubernamentales.</li>
-              <li>Diversificación de riesgo al incluir activos corporativos en tu portafolio.</li>
-          </ul>
-      </div>
-  </section>
-
-  <!-- Fondos Comunes de Inversión Section -->
-  <section class="py-5" id="fondos">
-      <div class="container">
-          <h2 class="section-title">5. Fondos Comunes de Inversión (FCI)</h2>
-          <p class="section-subtitle">¿Qué son los Fondos Comunes de Inversión?</p>
-          <p class="section-text">Los FCI son vehículos de inversión colectiva donde los fondos de varios inversores se agrupan para comprar una variedad de activos (acciones, bonos, bienes raíces, etc.). Están gestionados por profesionales que toman las decisiones de inversión.</p>
-          <h5 class="section-subtitle">Características clave:</h5>
-          <ul>
-              <li>Diversificación: Tu dinero se distribuye en diferentes activos, lo que ayuda a reducir el riesgo.</li>
-              <li>Gestión profesional: Un equipo experto se encarga de la administración del fondo.</li>
-              <li>Liquidez: Muchos fondos ofrecen la posibilidad de redimir tus participaciones fácilmente.</li>
-          </ul>
-          <h5 class="section-subtitle">Ventajas de invertir en FCI:</h5>
-          <ul>
-              <li>Acceso a una cartera diversificada sin necesidad de gestionar activos individualmente.</li>
-              <li>Gestión profesional para maximizar los rendimientos.</li>
-              <li>Alternativa accesible tanto para pequeños como grandes inversores.</li>
-          </ul>
-      </div>
-  </section>
-
-  <!-- Cauciones Section -->
-  <section class="bg-light py-5" id="cauciones">
-      <div class="container">
-          <h2 class="section-title">6. Cauciones</h2>
-          <p class="section-subtitle">¿Qué son las Cauciones?</p>
-          <p class="section-text">Las cauciones son una forma de préstamo a corto plazo, donde un inversor presta dinero a un banco o a una entidad financiera a cambio de una tasa de interés. Este tipo de instrumento es generalmente utilizado por quienes desean asegurar su dinero con un bajo riesgo, ya que el préstamo está respaldado por un activo.</p>
-          <h5 class="section-subtitle">Características clave:</h5>
-          <ul>
-              <li>Corto plazo: Suelen tener plazos de entre 30 y 90 días.</li>
-              <li>Bajo riesgo: Las cauciones están respaldadas por activos líquidos.</li>
-              <li>Rentabilidad fija: El rendimiento es conocido desde el momento de la inversión.</li>
-          </ul>
-          <h5 class="section-subtitle">Ventajas de las Cauciones:</h5>
-          <ul>
-              <li>Baja volatilidad y riesgo.</li>
-              <li>Ideal para inversores conservadores que buscan seguridad en su inversión.</li>
-              <li>Buena opción para quienes desean liquidez rápida.</li>
-          </ul>
-      </div>
-  </section>
 
   <!-- Llamado a la Acción -->
-  <section class="bg-primary text-white py-5 text-center">
+  <section class="bg-dark text-white py-3 text-center">
       <div class="container">
-          <h3 class="section-title">Empieza a invertir hoy mismo</h3>
-          <h2 class="section-title">Inscribete</h2>
-          
-          <a href="#contacto" class="btn btn-light btn-lg">Contáctanos</a>
+          <h3 class="section-title">Empieza a invertir hoy mismo... ¿Cómo?</h3>
+          <h3 class="section-title  mb-4">Sumate a la experiencia.</h3>          
+          <a class="btn btn-light"href="contacto.html?category=cursos&subCategory=Inversiones&message=Estoy%20interesado%20en%20realizar%20el%20curso%20de%20Inversiones">Contáctanos</a>
       </div>
   </section>
 
-    <!-- Pie de página -->
-    <footer class="bg-dark text-white text-center py-3">
-      <p>&copy; 2025 Todos los derechos reservados | Nueva Educación</p>
-      <ul class="list-inline">
-          <li class="list-inline-item"><a href="privacy.html" class="text-white">Política de Privacidad</a></li>
-          <li class="list-inline-item"><a href="terms.html" class="text-white">Términos y Condiciones</a></li>
-          <li class="list-inline-item"><a href="contacto.html" class="text-white">Contacto</a></li>
-      </ul>
-  </footer>
+  <div class="container text-center mt-2">
+    <p>Una sociedad en cambio continuo necesita de una educación que se adapte constantemente 
+    </p>
+  </div>
 
-</body>
+<!-- Pie de página -->
+<footer class="bg-dark text-white text-center py-2">
+  <p>&copy; 2025 Todos los derechos reservados | Nueva Educación</p>
+  
+  <!-- Lista de enlaces con flexbox -->
+  <ul class="list-inline d-flex flex-column flex-md-row justify-content-center">
+    <li class="list-inline-item">
+      <a href="privacy.html" class="text-white">Política de Privacidad</a>
+    </li>
+    <li class="list-inline-item">
+      <a href="terms.html" class="text-white">Términos y Condiciones</a>
+    </li>
+    <li class="list-inline-item">
+      <a href="contacto.html" class="text-white">Contacto</a>
+    </li>
+  </ul>
+</footer>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
 </html>

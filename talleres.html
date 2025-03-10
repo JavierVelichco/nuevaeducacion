@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
+    <link href="css/estilos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
+<body class="bg-light">
   <header>
     <!--menu-->
     <nav class="navbar navbar-expand-sm bg-body-tertiary" data-bs-theme="dark">
@@ -26,10 +27,8 @@
                 <ul class="dropdown-menu">
                   <li> <a class="dropdown-item" href="idiomas.html"> Idiomas </a></li> 
                   <li> <a class="dropdown-item" href="inversiones.html"> Inversiones</a></li> 
-                  <li> <a class="dropdown-item" href="desafios.html"> Desafios</a></li>
                   <li> <a class="dropdown-item" href="economia.html"> Economía</a></li>
                   <li> <a class="dropdown-item" href="gestion.html"> Gestión</a></li>  
-                  <li> <a class="dropdown-item" href="sustentabilidad.html"> Sustentabilidad</a></li>  
                   <li> <a class="dropdown-item" href="salud.html"> Salud</a></li>  
                 </ul>
               </li>           
@@ -43,7 +42,7 @@
                 <a class="nav-link" href="contacto.html">Contacto</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="jugareljuego.html">Juego</a>
+                <a class="nav-link" href="juego.html">Juego</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="autorpagina.html">Sobre mi</a>
@@ -54,97 +53,223 @@
       </nav>
     </header>
 
+<!-- Sección principal -->
+<div class="container-fluid degradado-dark my-1">
+  <h2 class="text-center">Nuestros Talleres</h2>
+  
+  <!-- Carrusel de talleres -->
+<div id="talleresCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    
+<!-- Taller 1 -->
+<div class="carousel-item active">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card" style="margin-bottom: 1rem;">
+        <!-- Imagen para pantallas grandes -->
+        <img src="img/tallerfotografia.png" class="card-img-top img-fluid d-none d-md-block" alt="Set de fotografia" style="max-height: 200px; object-fit: cover;">
+        <!-- Imagen para pantallas pequeñas -->
+        <img src="img/tallerfotografiapeque.png" class="card-img-top img-fluid d-block d-md-none" alt="Set de fotografia" style="max-height: 400px; object-fit: cover;">
+        
+        <!-- Texto para pantallas grandes -->
+        <div class="card-body d-none d-md-block p-2 text-center">
+          <h5 class="card-title fs-5">Taller de Fotografía</h5>
+          <p class="card-text fs-6">Aprende las técnicas de fotografía profesional, desde los ajustes básicos hasta las técnicas más avanzadas.</p>
+          <a href="contacto.html?category=talleres&subCategory=Fotografía&message=Estoy%20interesado%20en%20el%20taller%20fotografía" class="btn btn-dark btn-sm">Más Información</a>
+        </div>
 
-    <!-- Sección principal -->
-    <div class="container my-5">
-      <h1 class="text-center mb-5">Nuestros Talleres</h1>
-      <div class="row g-4"> <!-- Se agrega 'g-4' para espaciado entre columnas -->
-
-          <!-- Taller 1 -->
-          <div class="col-md-4">
-              <div class="card mb-4"> <!-- Usamos mb-4 para margen inferior -->
-                  <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Taller 1">
-                  <div class="card-body">
-                      <h5 class="card-title">Taller de Fotografía</h5>
-                      <p class="card-text">Aprende las técnicas de fotografía profesional, desde los ajustes básicos hasta las técnicas avanzadas.</p>
-                      <a href="#" class="btn btn-primary">Más Información</a>
-                  </div>
-              </div>
-          </div>
-
-          <!-- Taller 2 -->
-          <div class="col-md-4">
-              <div class="card mb-4"> <!-- Usamos mb-4 para margen inferior -->
-                  <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Taller 2">
-                  <div class="card-body">
-                      <h5 class="card-title">Taller de Pintura</h5>
-                      <p class="card-text">Explora el mundo de las artes plásticas y aprende las técnicas de pintura más populares.</p>
-                      <a href="#" class="btn btn-primary">Más Información</a>
-                  </div>
-              </div>
-          </div>
-
-          <!-- Taller 3 -->
-          <div class="col-md-4">
-              <div class="card mb-4"> <!-- Usamos mb-4 para margen inferior -->
-                  <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Taller 3">
-                  <div class="card-body">
-                      <h5 class="card-title">Taller de Cocina</h5>
-                      <p class="card-text">Descubre las recetas más sabrosas y aprende a cocinar platos deliciosos de diferentes culturas.</p>
-                      <a href="#" class="btn btn-primary">Más Información</a>
-                  </div>
-              </div>
-          </div>
-
-          <!-- Taller 4 -->
-          <div class="col-md-4">
-              <div class="card mb-4"> <!-- Usamos mb-4 para margen inferior -->
-                  <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Taller 4">
-                  <div class="card-body">
-                      <h5 class="card-title">Taller de Música</h5>
-                      <p class="card-text">Aprende a tocar instrumentos o mejora tu técnica vocal en nuestro taller de música.</p>
-                      <a href="#" class="btn btn-primary">Más Información</a>
-                  </div>
-              </div>
-          </div>
-
-          <!-- Taller 5 -->
-          <div class="col-md-4">
-              <div class="card mb-4"> <!-- Usamos mb-4 para margen inferior -->
-                  <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Taller 5">
-                  <div class="card-body">
-                      <h5 class="card-title">Taller de Escritura Creativa</h5>
-                      <p class="card-text">Desarrolla tus habilidades literarias y aprende a escribir cuentos, poemas y más.</p>
-                      <a href="#" class="btn btn-primary">Más Información</a>
-                  </div>
-              </div>
-          </div>
-
-          <!-- Taller 6 -->
-          <div class="col-md-4">
-              <div class="card mb-4"> <!-- Usamos mb-4 para margen inferior -->
-                  <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Taller 6">
-                  <div class="card-body">
-                      <h5 class="card-title">Taller de Diseño Gráfico</h5>
-                      <p class="card-text">Aprende a usar las herramientas más populares de diseño y crea tus propios proyectos gráficos.</p>
-                      <a href="#" class="btn btn-primary">Más Información</a>
-                  </div>
-              </div>
-          </div>
-
+        <!-- Texto para pantallas pequeñas -->
+        <div class="card-body d-block d-md-none p-2">
+          <a href="contacto.html?category=talleres&subCategory=Fotografía&message=Estoy%20interesado%20en%20el%20taller%20fotografía" class="btn btn-dark btn-sm">Más Información</a>
+        </div>
       </div>
+    </div>
   </div>
+</div>
 
-    <!-- Pie de página -->
-    <footer class="bg-dark text-white text-center py-3">
-      <p>&copy; 2025 Todos los derechos reservados | Nueva Educación</p>
-      <ul class="list-inline">
-          <li class="list-inline-item"><a href="privacy.html" class="text-white">Política de Privacidad</a></li>
-          <li class="list-inline-item"><a href="terms.html" class="text-white">Términos y Condiciones</a></li>
-          <li class="list-inline-item"><a href="contacto.html" class="text-white">Contacto</a></li>
-      </ul>
-  </footer>
 
+ <!-- Taller 2 -->
+<div class="carousel-item">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card" style="margin-bottom: 1rem;">
+        <!-- Imagen para pantallas grandes -->
+        <img src="img/tallerpintura.png" class="card-img-top img-fluid d-none d-md-block" alt="Pinceles y colores" style="max-height: 200px; object-fit: cover;">
+        <!-- Imagen para pantallas pequeñas -->
+        <img src="img/tallerpinturapeque.png" class="card-img-top img-fluid d-block d-md-none" alt="Pinceles y colores" style="max-height: 400px; object-fit: cover;">
+        
+        <!-- Texto para pantallas grandes -->
+        <div class="card-body d-none d-md-block p-2 text-center">
+          <h5 class="card-title fs-5">Taller de Pintura</h5>
+          <p class="card-text fs-6">Explora el mundo de las artes plásticas y aprende las técnicas de pintura más populares.</p>
+          <a href="contacto.html?category=talleres&subCategory=Pintura&message=Estoy%20interesado%20en%20el%20taller%20de%20pintura" class="btn btn-dark btn-sm">Más Información</a>
+        </div>
+
+        <!-- Texto para pantallas pequeñas -->
+        <div class="card-body d-block d-md-none p-2">
+          <a href="contacto.html?category=talleres&subCategory=Pintura&message=Estoy%20interesado%20en%20el%20taller%20de%20pintura" class="btn btn-dark btn-sm">Más Información</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Taller 3 -->
+<div class="carousel-item">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card" style="margin-bottom: 1rem;">
+        <!-- Imagen para pantallas grandes -->
+        <img src="img/tallercocina.png" class="card-img-top img-fluid d-none d-md-block" alt="Taller de Cocina" style="max-height: 200px; object-fit: cover;">
+        <!-- Imagen para pantallas pequeñas -->
+        <img src="img/tallercocinapeque.png" class="card-img-top img-fluid d-block d-md-none" alt="Taller de Cocina" style="max-height: 400px; object-fit: cover;">
+        
+        <!-- Texto para pantallas grandes -->
+        <div class="card-body d-none d-md-block p-2 text-center">
+          <h5 class="card-title fs-5">Taller de Cocina</h5>
+          <p class="card-text fs-6">Descubre las recetas más sabrosas y aprende a cocinar platos deliciosos de diferentes culturas.</p>
+          <a href="contacto.html?category=talleres&subCategory=Cocina&message=Estoy%20interesado%20en%20el%20taller%20de%20cocina" class="btn btn-dark btn-sm">Más Información</a>
+        </div>
+        
+        <!-- Texto para pantallas pequeñas -->
+        <div class="card-body d-block d-md-none p-2">
+          <a href="contacto.html?category=talleres&subCategory=Cocina&message=Estoy%20interesado%20en%20el%20taller%20de%20cocina" class="btn btn-dark btn-sm">Más Información</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Taller 4 -->
+<div class="carousel-item">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card" style="margin-bottom: 1rem;">
+        <!-- Imagen para pantallas grandes -->
+        <img src="img/tallermusica.png" class="card-img-top img-fluid d-none d-md-block" alt="Taller de Música" style="max-height: 200px; object-fit: cover;">
+        <!-- Imagen para pantallas pequeñas -->
+        <img src="img/tallermusicapeque.png" class="card-img-top img-fluid d-block d-md-none" alt="Taller de Música" style="max-height: 400px; object-fit: cover;">
+        
+        <!-- Texto para pantallas grandes -->
+        <div class="card-body d-none d-md-block p-2 text-center">
+          <h5 class="card-title fs-5">Taller de Música</h5>
+          <p class="card-text fs-6">Aprende a tocar instrumentos o mejora tu técnica vocal en nuestro taller de música.</p>
+          <a href="contacto.html?category=talleres&subCategory=Música&message=Estoy%20interesado%20en%20el%20taller%20de%20música" class="btn btn-dark btn-sm">Más Información</a>
+        </div>
+        
+        <!-- Texto para pantallas pequeñas -->
+        <div class="card-body d-block d-md-none p-2">
+          <a href="contacto.html?category=talleres&subCategory=Música&message=Estoy%20interesado%20en%20el%20taller%20de%20música" class="btn btn-dark btn-sm">Más Información</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Taller 5 -->
+<div class="carousel-item">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card" style="margin-bottom: 1rem;">
+        <!-- Imagen para pantallas grandes -->
+        <img src="img/tallerescritura.png" class="card-img-top img-fluid d-none d-md-block" alt="Taller de Escritura Creativa" style="max-height: 200px; object-fit: cover;">
+        <!-- Imagen para pantallas pequeñas -->
+        <img src="img/tallerescrinturapeque.png" class="card-img-top img-fluid d-block d-md-none" alt="Taller de Escritura Creativa" style="max-height: 400px; object-fit: cover;">
+        
+        <!-- Texto para pantallas grandes -->
+        <div class="card-body d-none d-md-block p-2 text-center">
+          <h5 class="card-title fs-5">Taller de Escritura Creativa</h5>
+          <p class="card-text fs-6">Desarrolla tus habilidades literarias y aprende a escribir cuentos, poemas y más.</p>
+          <a href="contacto.html?category=talleres&subCategory=Escritura%20Creativa&message=Estoy%20interesado%20en%20el%20taller%20de%20escritura%20creativa" class="btn btn-dark btn-sm">Más Información</a>
+        </div>
+        
+        <!-- Texto para pantallas pequeñas -->
+        <div class="card-body d-block d-md-none p-2">
+          <a href="contacto.html?category=talleres&subCategory=Escritura%20Creativa&message=Estoy%20interesado%20en%20el%20taller%20de%20escritura%20creativa" class="btn btn-dark btn-sm">Más Información</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Taller 6 -->
+<div class="carousel-item">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card" style="margin-bottom: 1rem;">
+        <!-- Imagen para pantallas grandes -->
+        <img src="img/tallerdiseno.png" class="card-img-top img-fluid d-none d-md-block" alt="Taller de Diseño Gráfico" style="max-height: 200px; object-fit: cover;">
+        <!-- Imagen para pantallas pequeñas -->
+        <img src="img/tallerdisenopeque.png" class="card-img-top img-fluid d-block d-md-none" alt="Taller de Diseño Gráfico" style="max-height: 200px; object-fit: cover;">
+        
+        <!-- Texto para pantallas grandes -->
+        <div class="card-body d-none d-md-block p-2 text-center">
+          <h5 class="card-title fs-5">Taller de Diseño Gráfico</h5>
+          <p class="card-text fs-6">Aprende a usar las herramientas más populares de diseño y crea tus propios proyectos gráficos.</p>
+          <a href="contacto.html?category=talleres&subCategory=Diseño%20Gráfico&message=Estoy%20interesado%20en%20el%20taller%20de%20diseño%20gráfico" class="btn btn-dark btn-sm">Más Información</a>
+        </div>
+        
+        <!-- Texto para pantallas pequeñas -->
+        <div class="card-body d-block d-md-none p-2">
+          <a href="contacto.html?category=talleres&subCategory=Diseño%20Gráfico&message=Estoy%20interesado%20en%20el%20taller%20de%20diseño%20gráfico" class="btn btn-dark btn-sm">Más Información</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+</div> <!-- Este es el div que cierra para el carrusel -->  
+
+<!-- Controles del carrusel sin fondo y con texto oscuro -->
+<button class="carousel-control-prev text-dark" type="button" data-bs-target="#talleresCarousel" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Anterior</span>
+</button>
+<button class="carousel-control-next text-dark" type="button" data-bs-target="#talleresCarousel" data-bs-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Siguiente</span>
+</button>
+
+
+
+
+  <!-- Llamado a la Acción -->
+  <section class="bg-dark text-white py-3 text-center">
+    <div class="container">
+        <h3 class="section-title">No te pierdas nuestros talleres</h3>
+        <h4 class="section-title  mb-3">Llegamos estes donde estes, presencial o virtual.</h4>          
+        <a href="contacto.html" class="btn btn-light"href="contacto.html?category=cursos&subCategory=Inversiones&message=Estoy%20interesado%20en%20realizar%20el%20curso%20de%20Inversiones">Sumate</a>
+    </div>
+</section>
+
+<div class="container text-center mt-2">
+  <p>Una sociedad en cambio continuo necesita de una educación que se adapte constantemente 
+  </p>
+</div>
+
+<!-- Pie de página -->
+<footer class="bg-dark text-white text-center py-2">
+  <p>&copy; 2025 Todos los derechos reservados | Nueva Educación</p>
+  
+  <!-- Lista de enlaces con flexbox -->
+  <ul class="list-inline d-flex flex-column flex-md-row justify-content-center">
+    <li class="list-inline-item">
+      <a href="privacy.html" class="text-white">Política de Privacidad</a>
+    </li>
+    <li class="list-inline-item">
+      <a href="terms.html" class="text-white">Términos y Condiciones</a>
+    </li>
+    <li class="list-inline-item">
+      <a href="contacto.html" class="text-white">Contacto</a>
+    </li>
+  </ul>
+</footer>
 </body>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>
