@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Posiciones</title>
+    <link href="../css/estilos.css" rel="stylesheet">
+</head>
+
+<body class="degradado-dark">
+    <header>
+        <!--menu-->
+        <nav class="navbar navbar-expand-sm bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">Nueva Educación</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../sobrenosotros/index.html">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="true">
+                                Cursos </a>
+                            <ul class="dropdown-menu">
+                                <li> <a class="dropdown-item" href="../cursos/idiomas.html"> Idiomas </a></li>
+                                <li> <a class="dropdown-item" href="../cursos/inversiones.html"> Inversiones</a>
+                                </li>
+                                <li> <a class="dropdown-item" href="../cursos/economia.html"> Economía</a></li>
+                                <li> <a class="dropdown-item" href="../cursos/gestion.html"> Gestión</a></li>
+                                <li> <a class="dropdown-item" href="../cursos/salud.html"> Salud</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../talleres/index.html">Talleres</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../tutoriales/index.html">Tutoriales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contacto/index.html">Contacto</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Entretenimiento </a>
+                            <ul class="dropdown-menu">
+                                <li> <a class="dropdown-item" href="index.html">Gamificación</a></li>
+                                <li> <a class="dropdown-item" href="juego.html">Juego</a></li>
+                                <li> <a class="dropdown-item" href="tabladeposiciones.html">Tabla de Posiciones</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../autorpagina/index.html">Sobre mi</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1 class="text-center h2 mt-2">Tabla de Posiciones</h1>
+
+            <!-- Función Oculto borra datos <button id="clearScoresBtn" class="btn btn-danger mt-3">Borrar</button> -->
+
+            <div class="container-fluid mt-2">
+                <!-- Aquí se mostrará la tabla de posiciones -->
+                <table id="highScoresTable" class="table table-bordered mt-4 fs-6 table-sm">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Puesto</th>
+                            <th class="text-center">Nombre</th>
+                            <th class="text-center">Puntaje</th>
+                            <th class="text-center">Tiempo</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                        <!-- Las filas se llenarán dinámicamente con los puntajes -->
+                    </tbody>
+                </table>
+                <!-- Volver al juego -->
+                <div class="text-center mt-2">
+                    <button onclick="window.location.href='juego.html'" class="btn btn-sm btn-dark">Volver al
+                        Juego</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="container-fluid bg-light text-center mt-2 py-1">
+        <p>Una sociedad en cambio continuo necesita de una educación que se adapte constantemente
+        </p>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-2 mt-0">
+        <p>&copy; 2025 Todos los derechos reservados | Nueva Educación</p>
+
+        <!-- Lista de enlaces con flexbox -->
+        <ul class="list-inline d-flex flex-column flex-md-row justify-content-center">
+            <li class="list-inline-item">
+                <a href="../legales/privacidad.html" class="text-white">Política de Privacidad</a>
+            </li>
+            <li class="list-inline-item">
+                <a href="../legales/index.html" class="text-white">Términos y Condiciones</a>
+            </li>
+            <li class="list-inline-item">
+                <a href="../contacto/index.html" class=" text-white">Contacto</a>
+            </li>
+        </ul>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="js/tabladeposiciones.js"></script>
+
+</body>
+
+</html>

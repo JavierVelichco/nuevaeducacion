@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoriales</title>
+    <link href="../css/estilos.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <header>
+        <!--menu-->
+        <nav class="navbar navbar-expand-sm bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html">Nueva Educación</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../sobrenosotros/index.html">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="true">
+                                Cursos </a>
+                            <ul class="dropdown-menu">
+                                <li> <a class="dropdown-item" href="../cursos/idiomas.html"> Idiomas </a></li>
+                                <li> <a class="dropdown-item" href="../cursos/inversiones.html"> Inversiones</a></li>
+                                <li> <a class="dropdown-item" href="../cursos/economia.html"> Economía</a></li>
+                                <li> <a class="dropdown-item" href="../cursos/gestion.html"> Gestión</a></li>
+                                <li> <a class="dropdown-item" href="../cursos/salud.html"> Salud</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../talleres/index.html">Talleres</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../tutoriales/index.html">Tutoriales</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../contacto/index.html">Contacto</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Entretenimiento </a>
+                            <ul class="dropdown-menu">
+                                <li> <a class="dropdown-item" href="index.html">Gamificación</a></li>
+                                <li> <a class="dropdown-item" href="juego.html">Juego</a></li>
+                                <li> <a class="dropdown-item" href="tabladeposiciones.html">Tabla de Posiciones</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../autorpagina/index.html">Sobre mi</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid">
+
+        <div class="container-fluid mt-2">
+
+            <!-- Modal para ingresar el nombre -->
+            <div id="nameModal" class="modal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Ingresa tu nombre</h5>
+                        </div>
+                        <div class="modal-body">
+                            <input type="text" id="playerName" class="form-control" placeholder="Escribe tu nombre...">
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" onclick="startGameWithName()">Continuar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Título del juego (se ocultará al comenzar el juego) -->
+            <h1 class="text-center" id="gameTitle">¡A juntar dinero!</h1>
+
+            <div class="container-fluid">
+                <!-- Instrucciones -->
+                <div class="instructions" id="instructions">
+                    <p>¡Bienvenido al juego! Tu trabajo es atrapar globos, cada uno tiene un valor que representa la
+                        cantidad de
+                        dinero que te daran por el. Algunos globos son especiales y van a darte oportunidades para
+                        multiplicar
+                        tu dinero acumulado.
+                        ¡Intenta alcanzar tu objetivo lo mas rapido posible!</p>
+                </div>
+
+                <div class="container-fluid bg-light text-center">
+                    <!-- Botón Iniciar Juego -->
+                    <button class="btn btn-dark ms-3 mt-3 mb-5" id="startBtn">Iniciar Juego</button>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-light text-center " id="frase">
+            <p>Una sociedad en cambio continuo necesita de una educación que se adapte constantemente
+            </p>
+        </div>
+
+        <!-- Pie de página -->
+        <footer class="bg-dark text-white text-center py-2 mt-4" id="footer">
+            <p>&copy; 2025 Todos los derechos reservados | Nueva Educación</p>
+
+            <!-- Lista de enlaces con flexbox -->
+            <ul class="list-inline d-flex flex-column flex-md-row justify-content-center">
+                <li class="list-inline-item">
+                    <a href="../legales/privacidad.html" class="text-white">Política de Privacidad</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="../legales/index.html" class="text-white">Términos y Condiciones</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="../contacto/index.html" class="text-white">Contacto</a>
+                </li>
+            </ul>
+        </footer>
+
+    </main>
+
+
+    <!-- Área del juego -->
+    <div class="game-area" id="gameArea"></div>
+
+    <!-- Puntuación acumulada y botones al lado -->
+    <div class="d-flex justify-content-center align-items-center">
+
+        <!-- Botón Pausar (se muestra solo cuando el juego está en progreso) -->
+        <button class="btn btn-warning btn-sm me-5" id="pauseBtn">Pausar</button>
+
+        <!-- Puntuación acumulada (inicialmente oculta el título del juego y aparece aquí) -->
+        <div class="score text-center" id="score">Acumulado: 0</div>
+
+        <!-- Botón Reiniciar (se muestra solo cuando el juego está en progreso) -->
+        <button class="btn btn-danger btn-sm ms-5" id="resetBtn">Reiniciar</button>
+    </div>
+
+    <!-- Mensaje de pausa -->
+    <div class="pause-message" id="pauseMessage">¡El juego está en pausa!</div>
+
+    <!-- Leyenda del dado -->
+    <div id="legend" class="legend"></div>
+
+
+    <!-- Contenedor para el mensaje de victoria y puntaje final -->
+    <div id="victoryImageContainer">
+        <img src="img/victoria.png" alt="Cerdito y monedas">
+        <div id="winMessage">
+            <P>¡Felicidades, has ganado!</P>
+        </div>
+        <p id="finalScore">
+            Puntaje Final: 0</p>
+        <p id="finalTime">
+            Tiempo: 0 segundos</p>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="js/juego.js"></script>
+
+</body>
+
+</html>

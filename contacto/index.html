@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+  <link href="../css/estilos.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+  <header>
+    <!--menu-->
+    <nav class="navbar navbar-expand-sm bg-body-tertiary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">Nueva Educación</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../sobrenosotros/index.html">Sobre nosotros</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Cursos </a>
+              <ul class="dropdown-menu">
+                <li> <a class="dropdown-item" href="../cursos/index.html">Nuestros Cursos</a></li>
+                <li> <a class="dropdown-item" href="../cursos/idiomas.html">Idiomas </a></li>
+                <li> <a class="dropdown-item" href="../cursos/inversiones.html">Inversiones</a></li>
+                <li> <a class="dropdown-item" href="../cursos/economia.html">Economía</a></li>
+                <li> <a class="dropdown-item" href="../cursos/gestion.html">Gestión</a></li>
+                <li> <a class="dropdown-item" href="../cursos/salud.html">Salud</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../talleres/index.html">Talleres</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../tutoriales/index.html">Tutoriales</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../contacto/index.html">Contacto</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Entretenimiento </a>
+              <ul class="dropdown-menu">
+                <li> <a class="dropdown-item" href="../entretenimiento/index.html">Gamificación</a></li>
+                <li> <a class="dropdown-item" href="../entretenimiento/juego.html">Juego</a></li>
+                <li> <a class="dropdown-item" href="../entretenimiento/tabladeposiciones.html"> Tabla de posiciones</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../autorpagina/index.html">Sobre mi</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container mt-3">
+      <h5 class="text-center">Completa el formulario y nos contactaremos de inmediato para asesorarte.</h5>
+      <h6 class="text-center">Estas a un paso de modificar tu futuro.</h6>
+    </div>
+
+    <div class="container mt-4">
+      <div class="card mx-auto max-width-600">
+        <div class="card-body  degradado-dark">
+          <form id="contactForm" action="https://formsubmit.co/c.j.velichco@gmail.com" method="POST">
+
+            <!-- Campo oculto para el asunto -->
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde el formulario">
+
+            <!-- Campo oculto para la redirección después del envío (opcional) -->
+            <input type="hidden" name="_next" value="https://javiervelichco.github.io/NuevaEducacion">
+
+            <div class="mb-3">
+              <label for="name" class="form-label">Nombre:</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Ingresa tu nombre" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo Electrónico:</label>
+              <input type="email" class="form-control" id="email" name="email"
+                placeholder="Ingresa tu correo electrónico" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="message" class="form-label">Mensaje:</label>
+              <textarea class="form-control" id="message" name="message" rows="4" placeholder="Escribe tu mensaje"
+                required></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="category" class="form-label">Tipo de Formación:</label>
+              <select class="form-select" id="category" name="category" required>
+                <option value="">Selecciona por favor</option>
+                <option value="cursos">Cursos</option>
+                <option value="talleres">Talleres</option>
+                <option value="tutoriales">Tutoriales</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="subCategory" class="form-label">Selecciona una opción:</label>
+              <select class="form-select" id="subCategory" name="subCategory" required>
+                <option value="">Primero selecciona un tipo de formación.</option>
+              </select>
+            </div>
+
+            <!-- Campo de taller, visible solo cuando se selecciona 'Talleres' -->
+            <div class="mb-3 d-none" id="tallerDiv">
+              <label for="taller" class="form-label">Selecciona un taller:</label>
+              <select class="form-select" id="taller" name="taller">
+                <option value="">Selecciona un taller</option>
+                <option value="fotografia">Fotografía</option>
+                <option value="pintura">Pintura</option>
+                <option value="cocina">Cocina</option>
+                <option value="musica">Música</option>
+                <option value="escritura">Escritura Creativa</option>
+                <option value="diseno">Diseño Gráfico</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-dark border-light w-100">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Línea de separación con borde superior -->
+  <div class="border-top my-1"></div>
+
+  <div class="container text-center mt-2">
+    <p>Una sociedad en cambio continuo necesita de una educación que se adapte constantemente
+    </p>
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="bg-dark text-white text-center py-2">
+    <p>&copy; 2025 Todos los derechos reservados | Nueva Educación</p>
+
+    <!-- Lista de enlaces con flexbox -->
+    <ul class="list-inline d-flex flex-column flex-md-row justify-content-center">
+      <li class="list-inline-item">
+        <a href="../legales/privacidad.html" class="text-white">Política de Privacidad</a>
+      </li>
+      <li class="list-inline-item">
+        <a href="../legales/index.html" class="text-white">Términos y Condiciones</a>
+      </li>
+      <li class="list-inline-item">
+        <a href="index.html" class="text-white">Contacto</a>
+      </li>
+    </ul>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+  <script src="js/formulario.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
